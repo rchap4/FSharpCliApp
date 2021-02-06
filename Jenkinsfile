@@ -7,7 +7,7 @@ pipeline {
                 dotnetRestore()
                 dotnetBuild()
                 
-                archiveArtifacts artifacts: '**/bin/Debug/net5.0/*.dll' '**/bin/Debug/net5.0/*.exe', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
+                archiveArtifacts artifacts: '**/bin/Debug/net5.0/*.dll','**/bin/Debug/net5.0/*.exe', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
             }
         }
     }
